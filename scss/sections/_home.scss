@@ -1,4 +1,57 @@
 @use "../abstracts/" as *;
 
 .header-section {
+	position: relative;
+	height: 100vh;
+	background-color: $light-pattern;
+}
+
+// --------------NAV BAR--------------------------------
+
+.nav-section {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 2rem;
+}
+
+.nav__links {
+	@include flex(row, 3rem);
+	list-style: none;
+	font-size: 0.8rem;
+	letter-spacing: 0.3rem;
+	cursor: pointer;
+	&::before {
+		@include pseudo-line(8.5rem, 0);
+		margin-top: 0.5rem;
+		margin-right: -1rem;
+		animation: header-nav-line 4s ease-in-out 0s 1 normal;
+	}
+	li a {
+		text-decoration: none;
+		color: $secondary-text;
+	}
+}
+
+@keyframes header-nav-line {
+	from {
+		opacity: 0;
+		transform: translateX(30vw);
+	}
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+// --------------HOME TITLE--------------------------------
+
+.home__title {
+	position: absolute;
+	left: 15rem;
+	bottom: 15rem;
+	&--hello,
+	&--developer {
+		color: red;
+	}
 }
