@@ -9,7 +9,13 @@
 .about-section::after {
 	content: "";
 	padding-block: 10em;
-	background-image: linear-gradient(100deg, #e9ecefff, #dee2e6ff, #ced4daff);
+	background-image: linear-gradient(
+		100deg,
+		#e9ecefff,
+		#dee2e6ff,
+		#ced4daff,
+		#adb5bdff
+	);
 	background-size: cover;
 	position: absolute;
 	top: -10vh;

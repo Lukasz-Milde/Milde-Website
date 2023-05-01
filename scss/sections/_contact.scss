@@ -54,12 +54,25 @@
 }
 
 // --------------CONTACT LOGO------------------------------
-
-.projects-logo {
+.contact-circle {
 	position: absolute;
-	z-index: 2;
-	bottom: 18rem;
-	right: 8rem;
-	width: 12rem;
-	height: 12rem;
+	right: 20rem;
+	bottom: 10%;
+	z-index: 1;
+	width: 30rem;
+	height: 30rem;
+	border-radius: 50%;
+	background-color: $strong-bg;
+	box-shadow: 120px 150px 400px $mid-pattern, inset 20px 40px 120px $mid-pattern;
+	&--small {
+		position: absolute;
+		right: -2rem;
+		bottom: 0;
+		width: 10rem;
+		height: 10rem;
+		border-radius: 50%;
+		background-color: $strong-bg;
+		box-shadow: -20px -50px 100px $mid-pattern,
+			inset 10px 20px 60px $mid-pattern;
+	}
 }
