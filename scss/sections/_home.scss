@@ -52,7 +52,9 @@
 		animation: header-nav-line 4s ease-in-out 0s 1 normal;
 	}
 	li a {
-		font-size: 0.8rem;
+		font-size: 1rem;
+		font-family: "IBM Plex Mono", monospace;
+		font-weight: bolder;
 		letter-spacing: 0.3rem;
 		text-decoration: none;
 		color: $secondary-text;

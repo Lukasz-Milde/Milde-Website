@@ -1,0 +1,121 @@
+@use "../abstracts/" as *;
+
+.projects-section {
+	position: relative;
+	height: 70vh;
+	isolation: isolate;
+}
+
+.projects-section::after {
+	content: "";
+	padding-block: 10em;
+	background-image: linear-gradient(100deg, #e9ecefff, #dee2e6ff, #ced4daff);
+	background-size: cover;
+	position: absolute;
+	top: -10vh;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transform: skewY(5deg);
+}
+
+// --------------PROJECTS CONTAINER------------------------------
+
+.projects__main-container {
+	position: absolute;
+	z-index: 1;
+	left: 5rem;
+	top: 5rem;
+	width: 40rem;
+	@include flex(column, 5rem);
+}
+
+.project-block {
+	@include flex(row, 1rem);
+	&__img {
+		width: 50rem;
+		height: 10rem;
+		overflow: hidden;
+		border-radius: 5px;
+		margin: 5px;
+		border: 2px $mid-pattern solid;
+		box-shadow: 5px 5px 20px grey;
+		img {
+			width: 100%;
+			height: 100%;
+			opacity: 0.25;
+			transition: 2s ease-out;
+			&:hover,
+			&:focus {
+				transform: scale(2);
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.project-block__text {
+	@include flex(column, 0.2rem);
+	justify-content: space-between;
+	width: 50rem;
+	&--title {
+		font-size: 1.5rem;
+		font-family: "Bruno Ace SC", cursive;
+	}
+	&--description {
+		font-family: "IBM Plex Mono", monospace;
+		font-size: 0.8rem;
+		letter-spacing: 0.02rem;
+	}
+	&--span {
+		font-size: 0.9rem;
+		font-weight: bold;
+	}
+	&--buttons {
+		@include flex(row, 1rem);
+		button {
+			font-family: "Bruno Ace SC", cursive;
+			border: none;
+			background-color: transparent;
+			color: $strong-pattern;
+			cursor: pointer;
+			transition: transform 0.4s ease-in-out;
+			&:hover,
+			&:focus {
+				transform: scale(1.2);
+			}
+		}
+	}
+}
+
+// --------------PROJECTS HEADER------------------------------
+
+.projects__header {
+	position: absolute;
+	z-index: 1;
+	right: 5rem;
+	bottom: 15rem;
+	width: 40rem;
+	&--title {
+		font-size: 5rem;
+		font-family: "Bruno Ace SC", cursive;
+		margin-bottom: 2rem;
+	}
+	&--text {
+		width: 20rem;
+		font-size: 1rem;
+		line-height: 1.5rem;
+		font-family: "IBM Plex Mono", monospace;
+	}
+}
+
+// --------------PROJECTS LOGO------------------------------
+
+.projects-logo {
+	position: absolute;
+	z-index: 2;
+	bottom: 3rem;
+	right: 8rem;
+	width: 12rem;
+	height: 12rem;
+}
