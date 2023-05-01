@@ -3,16 +3,34 @@
 .header-section {
 	position: relative;
 	height: 100vh;
-	background-color: $light-pattern;
+	isolation: isolate;
+}
+
+.header-section::after {
+	content: "";
+	height: 120vh;
+	background: $light-pattern;
+	position: absolute;
+	z-index: -1;
+	top: -10vh;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transform: skewY(-5deg);
 }
 
 // --------------NAV BAR--------------------------------
 
 .nav-section {
-	position: absolute;
-	top: 0;
-	right: 0;
+	@include flex(row, 0);
+	justify-content: space-between;
+	align-items: center;
 	padding: 2rem;
+}
+
+.nav__logo img {
+	width: 5rem;
+	height: 5rem;
 }
 
 .nav__links {
@@ -40,12 +58,27 @@
 
 @keyframes header-nav-line {
 	from {
-		opacity: 0;
+		// opacity: 0;
 		transform: translateX(30vw);
 	}
 	to {
-		opacity: 1;
+		// opacity: 1;
 		transform: none;
+	}
+}
+
+// --------------HOME TEXT----------------------------------
+
+.home-text {
+	position: absolute;
+	left: 15rem;
+	top: 7rem;
+	width: 25rem;
+	font-family: "IBM Plex Mono", monospace;
+	p {
+		font-size: 1rem;
+		letter-spacing: 0.1rem;
+		margin-bottom: 1rem;
 	}
 }
 
@@ -54,11 +87,20 @@
 .home-circle {
 	position: absolute;
 	right: 30rem;
-	bottom: 10rem;
+	bottom: 10%;
 	width: 40rem;
 	height: 40rem;
 	border-radius: 50%;
 	background-color: $strong-bg;
+	box-shadow: 120px 150px 400px $mid-pattern, inset 20px 40px 120px $mid-pattern;
+	&__logo {
+		margin-top: 20rem;
+		margin-left: 20rem;
+		img {
+			width: 20rem;
+			height: 20rem;
+		}
+	}
 }
 
 // --------------HOME TITLE--------------------------------
@@ -68,7 +110,7 @@
 	left: 15rem;
 	bottom: 15rem;
 	user-select: none;
-	text-shadow: 6px 6px 6px $strong-bg;
+	text-shadow: 2px 2px 6px $strong-pattern;
 	&--hello,
 	&--developer {
 		font-size: 2rem;
@@ -76,6 +118,7 @@
 	h1 {
 		font-size: 5rem;
 		letter-spacing: 0.3rem;
+		font-family: "Bruno Ace SC", cursive;
 	}
 }
 
@@ -113,6 +156,62 @@
 		opacity: 1;
 		transform: none;
 	}
+}
+
+// --------------SCROLL DOWN-----------------------------------
+
+.home-scroll {
+	position: absolute;
+	left: 15rem;
+	bottom: 3rem;
+	@include flex(column, 0.5rem);
+	&__span {
+		font-size: 1.2rem;
+		font-family: "IBM Plex Mono", monospace;
+	}
+	img {
+		// margin-left: -0.9rem;
+		width: 1.5rem;
+		height: 1.5rem;
+	}
+}
+
+// --------------SOCIAL NAV------------------------------------
+
+.social__nav {
+	position: absolute;
+	right: 2rem;
+	bottom: 8rem;
+	ul {
+		@include flex(column, 7rem);
+		list-style: none;
+	}
+	ul li {
+		width: 4rem;
+		height: 4rem;
+		padding: 0.7rem;
+		border-radius: 50%;
+		img {
+			width: 100%;
+			filter: invert(10%);
+			-webkit-filter: invert(10%);
+			cursor: pointer;
+			transition: all 2s ease-in-out;
+		}
+	}
+}
+
+.social__nav--block::after {
+	@include pseudo-line(2px, 0);
+	height: 3rem;
+	margin-top: 0.5rem;
+	margin-left: 50%;
+	background-color: $secondary-text;
+	transition: all 0.4s ease-in-out;
+}
+
+.social__nav--block:hover::after {
+	height: 5rem;
 }
 
 // // --------------NAV BAR--------------------------------
