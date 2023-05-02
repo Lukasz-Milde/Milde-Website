@@ -1,0 +1,162 @@
+@use "../abstracts/" as *;
+
+.footer-section {
+	position: relative;
+	height: 80vh;
+	isolation: isolate;
+}
+
+.footer-section::after {
+	content: "";
+	padding-block: 10em;
+	background-image: linear-gradient(100deg, #ced4daff, #adb5bdff);
+	background-size: cover;
+	position: absolute;
+	top: -19vh;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+	transform: skewY(-5deg);
+}
+
+// --------------FOOTER LEFT-------------------
+
+.footer__left {
+	position: absolute;
+	left: 5rem;
+	z-index: 2;
+	@include flex(column, 1.5rem);
+	font-family: "Bruno Ace SC", cursive;
+	font-size: 2rem;
+	&--top {
+		@include flex(column, 1.5rem);
+		img {
+			width: 7rem;
+			height: 7rem;
+		}
+	}
+	&--bottom {
+		@include flex(column, 1.5rem);
+	}
+}
+
+.footer__links {
+	@include flex(column, 1.5rem);
+}
+
+.design {
+	font-size: 1.5rem;
+	font-family: "IBM Plex Mono", monospace;
+}
+
+.author {
+	font-family: "Bruno Ace SC", cursive;
+	font-size: 2rem;
+}
+
+.footer__button {
+	position: absolute;
+	z-index: 2;
+	left: 5rem;
+	bottom: 10rem;
+	button {
+		margin-bottom: 3rem;
+		border: none;
+		background-color: transparent;
+		a {
+			font-size: 1.5rem;
+			font-family: "IBM Plex Mono", monospace;
+			cursor: pointer;
+			text-decoration: none;
+			color: $primary-text;
+		}
+		&::after {
+			@include pseudo-line(30vw, 0);
+			margin-left: -0.5rem;
+			transition: all 2s ease-in-out;
+			background-color: $light-pattern;
+		}
+		&:hover::after,
+		&:focus::after {
+			width: 90rem;
+		}
+	}
+}
+
+// --------------FOOTER RIGHT------------------------
+
+.footer__right {
+	position: absolute;
+	left: 30rem;
+	z-index: 2;
+	&--title {
+		font-family: "Bruno Ace SC", cursive;
+		font-size: 2rem;
+	}
+}
+
+.footer--credits {
+	list-style: none;
+	line-height: 2rem;
+	letter-spacing: 0.2rem;
+	font-size: 1rem;
+	font-family: "IBM Plex Mono", monospace;
+	li a {
+		color: $primary-text;
+		text-decoration: none;
+	}
+}
+
+// --------------SPHERE------------------------------
+
+.footer-sphere {
+	position: absolute;
+	right: 5rem;
+	bottom: 40%;
+	z-index: 2;
+	width: 30rem;
+	height: 30rem;
+	border-radius: 50%;
+	background-color: $strong-bg;
+	box-shadow: 120px 150px 400px $mid-pattern, inset 40px 40px 120px $mid-pattern;
+	&--small {
+		position: absolute;
+		left: -2rem;
+		bottom: 0;
+		width: 10rem;
+		height: 10rem;
+		border-radius: 50%;
+		background-color: $strong-bg;
+		box-shadow: -20px -50px 100px $mid-pattern,
+			inset 10px 20px 60px $mid-pattern;
+	}
+	&--logo img {
+		position: absolute;
+		right: 0;
+		top: -2rem;
+		z-index: 2;
+		width: 13rem;
+		height: 13rem;
+	}
+}
+
+// --------------BOTTOM FOOTER------------------------------
+
+.bottom__footer {
+	position: relative;
+	z-index: -1;
+	margin-top: -10rem;
+	z-index: 1;
+	height: 30vh;
+	background-image: linear-gradient(315deg, #ced4daff, #adb5bdff);
+	&--logo {
+		position: absolute;
+		bottom: 4rem;
+		left: 4rem;
+		img {
+			width: 8rem;
+			height: 8rem;
+		}
+	}
+}
