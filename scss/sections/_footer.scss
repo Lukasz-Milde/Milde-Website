@@ -160,3 +160,18 @@
 		}
 	}
 }
+
+.bottom__footer--text {
+	position: absolute;
+	right: 5rem;
+	top: 3rem;
+	width: 35vw;
+	text-align: end;
+	font-family: "IBM Plex Mono", monospace;
+	line-height: 1.5rem;
+	p {
+		font-size: 1rem;
+		letter-spacing: 0.1rem;
+		margin-bottom: 1rem;
+	}
+}
