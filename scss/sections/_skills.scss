@@ -78,3 +78,31 @@
 		background-color: $light-pattern;
 	}
 }
+
+// --------------MEDIA QUERIES------------------------------------
+
+@media (max-width: 1550px) {
+	.skills-section {
+		height: 75vh;
+	}
+
+	.skills__title {
+		top: 3rem;
+		left: 5rem;
+		&--span {
+			font-size: 3rem;
+			line-height: 4rem;
+		}
+	}
+
+	.skills-logo {
+		top: 2.5rem;
+		left: 23rem;
+		width: 7rem;
+		height: 7rem;
+	}
+
+	.skills__container {
+		bottom: 12rem;
+	}
+}

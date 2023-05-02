@@ -58,8 +58,16 @@
 .contact-logo {
 	position: absolute;
 	z-index: 1;
-	top: 10rem;
+	top: 25%;
 	right: 8rem;
-	width: 10rem;
-	height: 10rem;
+	width: 9rem;
+	height: 9rem;
+}
+
+// --------------MEDIA QUERIES------------------------------------
+
+@media (max-width: 1000px) {
+	.contact-logo {
+		top: 35%;
+	}
 }

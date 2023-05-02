@@ -31,7 +31,7 @@
 	position: absolute;
 	z-index: 1;
 	left: 5rem;
-	bottom: 8rem;
+	top: 45%;
 	width: 8rem;
 	height: 8rem;
 }
@@ -53,4 +53,25 @@
 .about__container--hash {
 	font-size: 1rem;
 	font-weight: bold;
+}
+
+// --------------MEDIA QUERIES------------------------------------
+
+@media (max-width: 840px) {
+	.about-section {
+		height: 80vh;
+	}
+	.about__container--finger {
+		top: 12rem;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.about__container--block {
+		right: 50%;
+		transform: translateX(50%);
+		bottom: 10rem;
+		text-align: center;
+		width: 50rem;
+	}
 }

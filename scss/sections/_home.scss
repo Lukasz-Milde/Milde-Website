@@ -82,6 +82,7 @@
 	position: absolute;
 	left: 15rem;
 	top: 7rem;
+	z-index: 3;
 	width: 25rem;
 	font-family: "IBM Plex Mono", monospace;
 	p {
@@ -224,4 +225,71 @@
 	height: 5rem;
 }
 
-// --------------SOCIAL NAV------------------------------------
+// --------------MEDIA QUERIES------------------------------------
+
+@media (max-width: 1400px) {
+	.home-text {
+		left: 5rem;
+		top: 9rem;
+	}
+
+	.home__title {
+		left: 5rem;
+	}
+
+	.home-sphere {
+		right: 10vw;
+	}
+
+	.home-scroll {
+		left: 5rem;
+	}
+}
+
+@media (max-width: 1100px) {
+	.home-sphere {
+		right: 10vw;
+		bottom: 43%;
+		width: 20rem;
+		height: 20rem;
+
+		&__logo {
+			margin-top: 11rem;
+			margin-left: 13rem;
+			img {
+				width: 7rem;
+				height: 7rem;
+			}
+		}
+	}
+}
+
+@media (max-width: 800px) {
+	.nav__links {
+		gap: 1.5rem;
+	}
+
+	.nav__links::before {
+		display: none;
+	}
+
+	.home-sphere__logo {
+		display: none;
+	}
+
+	.social__nav {
+		right: 3rem;
+		bottom: 3rem;
+		ul {
+			@include flex(row, 3rem);
+		}
+	}
+
+	.social__nav--block::after {
+		display: none;
+	}
+
+	.social__nav--block:hover::after {
+		height: 5rem;
+	}
+}

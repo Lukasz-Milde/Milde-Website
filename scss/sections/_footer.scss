@@ -89,7 +89,9 @@
 .footer__right {
 	position: absolute;
 	left: 30rem;
-	z-index: 2;
+	z-index: 5;
+	max-width: 50rem;
+	margin-right: 3rem;
 	&--title {
 		font-family: "Bruno Ace SC", cursive;
 		font-size: 2rem;
@@ -174,4 +176,17 @@
 		letter-spacing: 0.1rem;
 		margin-bottom: 1rem;
 	}
+}
+
+// --------------MEDIA QUERIES------------------------------------
+
+@media (max-width: 1400px) {
+	.footer-sphere {
+		&--logo img {
+			display: none;
+		}
+	}
+}
+
+@media (max-width: 1000px) {
 }
