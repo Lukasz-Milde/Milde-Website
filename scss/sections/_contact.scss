@@ -71,3 +71,24 @@
 		top: 35%;
 	}
 }
+
+@media (max-width: 700px) {
+	.contact-section {
+		height: 90vh;
+	}
+
+	.contact__container {
+		left: 50%;
+		transform: translateX(-50%);
+		@include flex(column, 2rem);
+		&--title {
+			font-size: 2rem;
+		}
+	}
+
+	.contact-logo {
+		top: 50%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}

@@ -106,3 +106,52 @@
 		bottom: 12rem;
 	}
 }
+
+@media (max-width: 710px) {
+	.skills-section {
+		height: 100vh;
+	}
+
+	.skills__title {
+		left: 50%;
+		transform: translateX(-50%);
+		&--span {
+			font-size: 2rem;
+			line-height: 3rem;
+		}
+	}
+	.skills-logo {
+		top: 2.5rem;
+		left: 55%;
+		width: 5rem;
+		height: 5rem;
+	}
+
+	.skills__container {
+		bottom: 10rem;
+		right: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 15rem;
+		@include flex(column, 2rem);
+		text-align: center;
+	}
+
+	.skills__container--list {
+		list-style: none;
+		font-size: 1.3rem;
+		line-height: 2.5rem;
+		font-family: "IBM Plex Mono", monospace;
+		font-weight: bold;
+		li::before {
+			@include pseudo-line(3rem, 0);
+			margin-right: 0.3rem;
+			background-color: $mid-pattern;
+		}
+		li::after {
+			@include pseudo-line(3rem, 0);
+			margin-right: 0.3rem;
+			background-color: $mid-pattern;
+		}
+	}
+}

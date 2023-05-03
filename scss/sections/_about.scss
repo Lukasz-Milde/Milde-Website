@@ -75,3 +75,13 @@
 		width: 50rem;
 	}
 }
+
+@media (max-width: 500px) {
+	.about__container--finger {
+		top: 20%;
+	}
+	.about__container--block {
+		bottom: 8rem;
+		max-width: 80vw;
+	}
+}

@@ -143,11 +143,14 @@
 		left: 50%;
 		transform: translateX(-50%);
 		top: 2rem;
+		align-items: center;
+		width: 80vw;
 	}
 
 	.project-block {
 		@include flex(column, 2rem);
 		align-items: center;
+		width: 80vw;
 		&__img {
 			width: 20rem;
 			height: 10rem;
@@ -174,14 +177,19 @@
 
 	.projects__header {
 		z-index: 1;
-		left: 30%;
+		right: 0;
+		left: 50%;
+		transform: translateX(-50%);
 		bottom: 20rem;
-		width: 40rem;
+		width: auto;
+		text-align: center;
 		&--title {
-			font-size: 3rem;
+			font-size: 2rem;
 		}
 		&--text {
+			width: 50vw;
 			text-align: center;
+			font-size: 0.8rem;
 		}
 	}
 
