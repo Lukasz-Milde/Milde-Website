@@ -203,7 +203,7 @@
 
 	.footer--icon {
 		position: absolute;
-		top: -10rem;
+		top: -8rem;
 		left: 50%;
 		transform: translateX(-50%);
 	}
@@ -339,5 +339,31 @@
 @media (max-width: 260px) {
 	.footer-section {
 		height: 155vh;
+	}
+}
+
+// @media (max-height: 1000px) {
+// 	.footer-section {
+// 		height: 135vh;
+// 	}
+// }
+
+@media (max-height: 750px) {
+	.footer-section {
+		height: 175vh;
+	}
+
+	.bottom__footer {
+		height: 55vh;
+	}
+}
+
+@media (max-height: 700px) {
+	.footer-section {
+		height: 185vh;
+	}
+
+	.bottom__footer {
+		height: 60vh;
 	}
 }

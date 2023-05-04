@@ -235,3 +235,51 @@
 		}
 	}
 }
+
+// @media (max-height: 1400px) {
+// 	.projects-section {
+// 		height: 90vh;
+// 	}
+// }
+
+@media (max-height: 1400px) {
+	.projects-section {
+		height: 70vh;
+	}
+}
+
+@media (max-height: 1200px) {
+	.projects-section {
+		height: 90vh;
+	}
+}
+
+@media (max-height: 1000px) {
+	.projects-section {
+		height: 110vh;
+	}
+}
+
+@media (max-height: 900px) {
+	.projects-section {
+		height: 120vh;
+	}
+}
+
+@media (max-height: 750px) {
+	.projects-section {
+		height: 160vh;
+	}
+}
+
+@media (max-height: 660px) {
+	.projects-section {
+		height: 180vh;
+	}
+}
+
+// @media (max-height: 750px) {
+// 	.projects-section {
+// 		height: 180vh;
+// 	}
+// }

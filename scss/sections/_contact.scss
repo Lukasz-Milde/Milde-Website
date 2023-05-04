@@ -118,3 +118,30 @@
 		height: 6rem;
 	}
 }
+
+@media (max-height: 1050px) {
+	.contact-section {
+		height: 70vh;
+		padding-bottom: 13rem;
+	}
+}
+
+@media (max-height: 1000px) {
+	.contact-section {
+		height: 70vh;
+		padding-bottom: 10rem;
+	}
+}
+
+@media (max-height: 750px) {
+	.contact-section {
+		height: 80vh;
+		padding-bottom: 10rem;
+	}
+}
+
+@media (max-height: 700px) {
+	.contact-section {
+		height: 90vh;
+	}
+}

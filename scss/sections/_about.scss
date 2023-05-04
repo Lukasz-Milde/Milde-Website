@@ -87,3 +87,9 @@
 		font-size: 0.8rem;
 	}
 }
+
+@media (max-height: 700px) {
+	.about-section {
+		height: 110vh;
+	}
+}

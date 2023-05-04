@@ -188,3 +188,15 @@
 		@include flex(column, 2rem);
 	}
 }
+
+@media (max-height: 750px) {
+	.skills-section {
+		height: 135vh;
+	}
+}
+
+@media (max-height: 700px) {
+	.skills-section {
+		height: 140vh;
+	}
+}
