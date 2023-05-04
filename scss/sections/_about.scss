@@ -4,6 +4,10 @@
 	position: relative;
 	height: 50vh;
 	isolation: isolate;
+	@include flex(row, 0);
+	justify-content: space-between;
+	align-items: center;
+	padding-inline: 3rem;
 }
 
 .about-section::after {
@@ -22,31 +26,26 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	transform: skewY(5deg);
+	z-index: -1;
+	transform: skewY(4deg);
 }
 
 // --------------ABOUT CONTAINER----------------------------
 
 .about__container--finger {
-	position: absolute;
-	z-index: 1;
-	left: 5rem;
-	top: 45%;
-	width: 8rem;
-	height: 8rem;
+	width: 7rem;
+	height: 7rem;
+	padding-top: 2rem;
 }
 
 .about__container--block {
-	z-index: 1;
-	position: absolute;
-	right: 5rem;
-	bottom: 4rem;
+	padding-top: 2rem;
 	max-width: 30rem;
 	font-family: "IBM Plex Mono", monospace;
 }
 
 .about__container--text {
-	font-size: 1.2rem;
+	font-size: 1rem;
 	margin-bottom: 1rem;
 }
 
@@ -57,31 +56,34 @@
 
 // --------------MEDIA QUERIES------------------------------------
 
-@media (max-width: 840px) {
+@media (max-width: 750px) {
 	.about-section {
 		height: 80vh;
-	}
-	.about__container--finger {
-		top: 12rem;
-		left: 50%;
-		transform: translateX(-50%);
-	}
-
-	.about__container--block {
-		right: 50%;
-		transform: translateX(50%);
-		bottom: 10rem;
+		@include flex(column, 2rem);
+		justify-content: space-between;
+		padding-block: 8rem;
 		text-align: center;
-		width: 50rem;
 	}
 }
 
-@media (max-width: 500px) {
-	.about__container--finger {
-		top: 20%;
+@media (max-width: 400px) {
+	.about-section {
+		height: 80vh;
+		@include flex(column, 2rem);
+		justify-content: space-between;
+		padding-block: 8rem;
+		text-align: center;
 	}
-	.about__container--block {
-		bottom: 8rem;
-		max-width: 80vw;
+	.about__container--finger {
+		width: 5rem;
+		height: 5rem;
+	}
+
+	.about__container--text {
+		font-size: 0.8rem;
+	}
+
+	.about__container--hash {
+		font-size: 0.8rem;
 	}
 }

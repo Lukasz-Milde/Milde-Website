@@ -18,12 +18,12 @@
 		#6c757dff
 	);
 	position: absolute;
-	z-index: -1;
+	z-index: -2;
 	top: -10vh;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	transform: skewY(-5deg);
+	transform: skewY(-3deg);
 }
 
 // --------------NAV BAR--------------------------------
@@ -76,13 +76,19 @@
 	}
 }
 
+// --------------HOME MAIN----------------------------------
+
+.home-main {
+	position: absolute;
+	left: 10rem;
+	top: 50%;
+	transform: translateY(-50%);
+	@include flex(column, 5rem);
+}
+
 // --------------HOME TEXT----------------------------------
 
 .home-text {
-	position: absolute;
-	left: 15rem;
-	top: 7rem;
-	z-index: 3;
 	width: 25rem;
 	font-family: "IBM Plex Mono", monospace;
 	p {
@@ -95,10 +101,6 @@
 // --------------HOME TITLE--------------------------------
 
 .home__title {
-	position: absolute;
-	left: 15rem;
-	bottom: 15rem;
-	z-index: 3;
 	user-select: none;
 	text-shadow: 2px 2px 6px $strong-pattern;
 	&--hello,
@@ -154,6 +156,7 @@
 	position: absolute;
 	right: 20vw;
 	bottom: 10%;
+	z-index: -1;
 	width: 40rem;
 	height: 40rem;
 	border-radius: 50%;
@@ -173,7 +176,7 @@
 
 .home-scroll {
 	position: absolute;
-	left: 15rem;
+	left: 10rem;
 	bottom: 3rem;
 	@include flex(column, 0.5rem);
 	&__span {
@@ -277,28 +280,13 @@
 		display: none;
 	}
 
-	.social__nav {
-		right: 3rem;
-		bottom: 3rem;
-		ul {
-			@include flex(row, 3rem);
-		}
-	}
-
-	.social__nav--block::after {
-		display: none;
-	}
-
-	.social__nav--block:hover::after {
-		height: 5rem;
-	}
-}
-
-@media (max-width: 700px) {
-	.home__title {
+	.home-main {
+		top: 7rem;
 		left: 50%;
 		transform: translateX(-50%);
-		bottom: 15rem;
+	}
+
+	.home__title {
 		text-align: center;
 		&--hello,
 		&--developer {
@@ -315,7 +303,51 @@
 		margin-left: 1rem;
 		background-color: $secondary-text;
 	}
+	.home__title--hello::before {
+		@include pseudo-line(2rem, 0.5rem);
+		margin-right: 1rem;
+		background-color: $secondary-text;
+	}
 
+	.home__title--developer::before {
+		display: none;
+	}
+}
+
+.social__nav {
+	right: 3rem;
+	bottom: 3rem;
+	ul {
+		@include flex(row, 3rem);
+	}
+}
+
+.social__nav--block::after {
+	display: none;
+}
+
+.social__nav--block:hover::after {
+	height: 5rem;
+}
+
+@media (max-width: 700px) {
+	.home__title {
+		text-align: center;
+		&--hello,
+		&--developer {
+			font-size: 1.5rem;
+		}
+		h1 {
+			font-size: 4rem;
+			margin-block: 1rem;
+		}
+	}
+
+	.home__title--hello::after {
+		@include pseudo-line(2rem, 0.5rem);
+		margin-left: 1rem;
+		background-color: $secondary-text;
+	}
 	.home__title--hello::before {
 		@include pseudo-line(2rem, 0.5rem);
 		margin-right: 1rem;
@@ -357,12 +389,14 @@
 	}
 
 	.home-text {
-		top: 13rem;
-		width: 15rem;
+		display: none;
+	}
+
+	.home-main {
+		top: 30%;
 	}
 
 	.home__title {
-		width: 60%;
 		&--hello,
 		&--developer {
 			font-size: 1.2rem;
@@ -374,15 +408,18 @@
 	}
 
 	.home__title--hello::after {
-		@include pseudo-line(1rem, 0.5rem);
-		margin-left: 0.5rem;
-		background-color: $secondary-text;
+		display: none;
 	}
 
 	.home__title--hello::before {
-		@include pseudo-line(1rem, 0.5rem);
-		margin-right: 0.5rem;
-		background-color: $secondary-text;
+		display: none;
+	}
+
+	.home-sphere {
+		left: 50%;
+		transform: translateX(-50%);
+		width: 13rem;
+		height: 13rem;
 	}
 
 	.social__nav {
@@ -392,18 +429,25 @@
 	}
 
 	.home-scroll {
-		bottom: 0;
+		bottom: 1rem;
 		left: 50%;
 		transform: translateX(-50%);
 		@include flex(column-reverse, 1.5rem);
 		align-items: center;
-		&__span {
-			font-size: 1.2rem;
-			font-family: "IBM Plex Mono", monospace;
+	}
+
+	.social__nav {
+		left: 50%;
+		transform: translateX(-50%);
+		ul {
+			flex-direction: column;
+			align-items: center;
+			gap: 20%;
 		}
-		img {
-			width: 2.5rem;
-			height: 2.5rem;
+		ul li {
+			img {
+				width: 40px;
+			}
 		}
 	}
 }

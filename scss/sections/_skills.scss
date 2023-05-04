@@ -2,13 +2,17 @@
 
 .skills-section {
 	position: relative;
-	height: 70vh;
+	height: 80vh;
 	isolation: isolate;
+	@include flex(row, 0);
+	justify-content: space-between;
+	align-items: center;
+	padding-inline: 3rem;
+	padding-block: 6rem;
 }
 
 .skills-section::after {
 	content: "";
-	padding-block: 5em;
 	background-image: linear-gradient(
 		315deg,
 		#dee2e6ff,
@@ -22,16 +26,15 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	transform: skewY(5deg);
+	z-index: -1;
+	transform: skewY(3deg);
 }
 
 // --------------SKILLS TITLE------------------------------
 
 .skills__title {
-	position: absolute;
-	z-index: 1;
-	top: 5rem;
-	left: 5rem;
+	max-width: 30rem;
+	align-self: start;
 	&--span {
 		font-size: 5rem;
 		line-height: 7rem;
@@ -40,7 +43,7 @@
 }
 // --------------SKILLS LOGO------------------------------
 
-.skills-logo {
+.skills__title--logo {
 	position: absolute;
 	z-index: 2;
 	top: 8rem;
@@ -52,11 +55,7 @@
 // --------------SKILLS LIST------------------------------
 
 .skills__container {
-	position: absolute;
-	z-index: 1;
-	bottom: 10rem;
-	right: 10rem;
-	width: 30rem;
+	align-self: end;
 	@include flex(row, 0);
 	justify-content: space-between;
 	text-align: end;
@@ -81,77 +80,111 @@
 
 // --------------MEDIA QUERIES------------------------------------
 
-@media (max-width: 1550px) {
-	.skills-section {
-		height: 75vh;
+@media (max-width: 1300px) {
+	.skills__title--span {
+		font-size: 3rem;
+		line-height: 5rem;
 	}
 
-	.skills__title {
-		top: 3rem;
-		left: 5rem;
-		&--span {
-			font-size: 3rem;
-			line-height: 4rem;
-		}
-	}
-
-	.skills-logo {
-		top: 2.5rem;
-		left: 23rem;
+	.skills__title--logo {
+		position: absolute;
+		z-index: 2;
+		top: 7rem;
+		left: 20rem;
 		width: 7rem;
 		height: 7rem;
 	}
-
-	.skills__container {
-		bottom: 12rem;
-	}
 }
 
-@media (max-width: 710px) {
+@media (max-width: 1300px) {
 	.skills-section {
 		height: 100vh;
+		@include flex(column, 2rem);
+		justify-content: center;
+		padding-inline: 3rem;
+		padding-bottom: 5rem;
+		padding-top: 0;
 	}
 
 	.skills__title {
-		left: 50%;
-		transform: translateX(-50%);
+		max-width: 30rem;
+		position: relative;
+		&--logo {
+			position: absolute;
+			z-index: 2;
+			top: 1rem;
+			left: 17rem;
+			width: 7rem;
+			height: 7rem;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.skills-section {
+		padding-inline: 1rem;
+	}
+
+	.skills__title {
+		align-self: center;
 		&--span {
 			font-size: 2rem;
 			line-height: 3rem;
 		}
-	}
-	.skills-logo {
-		top: 2.5rem;
-		left: 55%;
-		width: 5rem;
-		height: 5rem;
+		&--logo {
+			left: 11rem;
+			width: 4rem;
+			height: 4rem;
+		}
 	}
 
 	.skills__container {
-		bottom: 10rem;
-		right: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		width: 15rem;
-		@include flex(column, 2rem);
+		align-self: center;
 		text-align: center;
+		&--span {
+			font-size: 1.2rem;
+			color: $strong-pattern;
+		}
 	}
 
 	.skills__container--list {
 		list-style: none;
-		font-size: 1.3rem;
+		font-size: 1rem;
 		line-height: 2.5rem;
-		font-family: "IBM Plex Mono", monospace;
-		font-weight: bold;
 		li::before {
-			@include pseudo-line(3rem, 0);
+			@include pseudo-line(2rem, 0);
 			margin-right: 0.3rem;
-			background-color: $mid-pattern;
+			background-color: $light-pattern;
 		}
 		li::after {
-			@include pseudo-line(3rem, 0);
+			@include pseudo-line(2rem, 0);
 			margin-right: 0.3rem;
-			background-color: $mid-pattern;
+			background-color: $light-pattern;
 		}
+	}
+}
+
+@media (max-width: 400px) {
+	.skills-section {
+		height: 120vh;
+	}
+
+	.skills__title {
+		text-align: center;
+		&--span {
+			font-size: 1.5rem;
+			line-height: 2.5rem;
+		}
+		&--logo {
+			top: -5rem;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 4rem;
+			height: 4rem;
+		}
+	}
+
+	.skills__container {
+		@include flex(column, 2rem);
 	}
 }

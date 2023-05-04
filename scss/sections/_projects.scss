@@ -2,8 +2,13 @@
 
 .projects-section {
 	position: relative;
-	height: 70vh;
+	height: 80vh;
 	isolation: isolate;
+	@include flex(row, 3rem);
+	justify-content: space-between;
+	align-items: flex-start;
+	padding-inline: 4rem;
+	padding-bottom: 10rem;
 }
 
 .projects-section::after {
@@ -22,24 +27,24 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
+	z-index: -1;
 	transform: skewY(5deg);
 }
 
 // --------------PROJECTS CONTAINER------------------------------
 
 .projects__main-container {
-	position: absolute;
-	z-index: 1;
-	left: 5rem;
-	top: 5rem;
-	width: 40rem;
-	@include flex(column, 5rem);
+	align-self: center;
+	@include flex(column, 2rem);
+	justify-content: center;
+	align-items: center;
 }
 
 .project-block {
 	@include flex(row, 1rem);
+	width: 40rem;
 	&__img {
-		width: 50rem;
+		width: 70rem;
 		height: 10rem;
 		overflow: hidden;
 		border-radius: 5px;
@@ -63,12 +68,13 @@
 .project-block__text {
 	@include flex(column, 0.2rem);
 	justify-content: space-between;
-	width: 50rem;
+	width: 80rem;
 	&--title {
 		font-size: 1.5rem;
 		font-family: "Bruno Ace SC", cursive;
 	}
 	&--description {
+		max-width: 40rem;
 		font-family: "IBM Plex Mono", monospace;
 		font-size: 0.8rem;
 		letter-spacing: 0.02rem;
@@ -97,10 +103,7 @@
 // --------------PROJECTS HEADER------------------------------
 
 .projects__header {
-	position: absolute;
-	z-index: 1;
-	right: 5rem;
-	bottom: 15rem;
+	align-self: center;
 	width: 40rem;
 	&--title {
 		font-size: 5rem;
@@ -128,76 +131,107 @@
 
 // --------------MEDIA QUERIES------------------------------------
 
-@media (max-width: 1530px) {
-	.projects-section {
-		height: 110vh;
+@media (max-width: 1500px) {
+	.projects__header--title {
+		font-size: 3rem;
 	}
 }
 
-@media (max-width: 780px) {
+@media (max-width: 1150px) {
 	.projects-section {
-		height: 165vh;
-	}
-
-	.projects__main-container {
-		left: 50%;
-		transform: translateX(-50%);
-		top: 2rem;
-		align-items: center;
-		width: 80vw;
-	}
-
-	.project-block {
-		@include flex(column, 2rem);
-		align-items: center;
-		width: 80vw;
-		&__img {
-			width: 20rem;
-			height: 10rem;
-		}
-	}
-
-	.project-block__text {
-		gap: 1.5rem;
-		width: 20rem;
-		text-align: center;
-		&--description {
-			font-size: 1.2rem;
-		}
-		&--span {
-			font-size: 1.2rem;
-		}
-		&--buttons {
-			justify-content: center;
-			button {
-				font-size: 1.2rem;
-			}
-		}
+		height: 110vh;
+		@include flex(column-reverse, 0);
+		padding-bottom: 13rem;
 	}
 
 	.projects__header {
-		z-index: 1;
-		right: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		bottom: 20rem;
-		width: auto;
 		text-align: center;
-		&--title {
-			font-size: 2rem;
-		}
 		&--text {
-			width: 50vw;
-			text-align: center;
-			font-size: 0.8rem;
+			margin-inline: auto;
 		}
 	}
 
 	.projects-logo {
-		bottom: 6rem;
-		left: 50%;
-		transform: translateX(-50%);
-		width: 10rem;
-		height: 10rem;
+		bottom: 2rem;
+		right: 3rem;
+		width: 7rem;
+		height: 7rem;
+	}
+}
+
+@media (max-width: 700px) {
+	.projects-section {
+		height: 140vh;
+		padding-bottom: 7rem;
+	}
+	.project-block {
+		@include flex(column, 1.5rem);
+		align-items: center;
+		width: 90%;
+		&__img {
+			width: 20rem;
+		}
+	}
+
+	.project-block__text {
+		gap: 1rem;
+		width: 20rem;
+		text-align: center;
+		&--buttons {
+			@include flex(row, 1.5rem);
+			justify-content: center;
+		}
+	}
+
+	.projects__header {
+		width: 90%;
+	}
+}
+
+@media (max-width: 500px) {
+	.projects__header {
+		width: 80vw;
+	}
+
+	.projects__header--title {
+		font-size: 3em;
+		margin-bottom: 0.5rem;
+	}
+
+	.projects__header--text {
+		font-size: 1.2em;
+		width: 100%;
+	}
+
+	.project-block {
+		&__img {
+			width: 15rem;
+			height: 8rem;
+		}
+	}
+
+	.projects-section {
+		padding-bottom: 12rem;
+	}
+}
+
+@media (max-width: 350px) {
+	.project-block {
+		@include flex(column, 1.5rem);
+		align-items: center;
+		width: 85vw;
+		&__img {
+			width: 15rem;
+		}
+	}
+
+	.project-block__text {
+		gap: 1rem;
+		width: 15rem;
+		text-align: center;
+		&--buttons {
+			@include flex(row, 1.5rem);
+			justify-content: center;
+		}
 	}
 }
