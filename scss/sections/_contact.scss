@@ -2,8 +2,13 @@
 
 .contact-section {
 	position: relative;
-	height: 70vh;
+	height: 80vh;
 	isolation: isolate;
+	@include flex(row, 0);
+	justify-content: space-between;
+	align-items: center;
+	padding-inline: 4rem;
+	padding-bottom: 12rem;
 }
 
 .contact-section::after {
@@ -22,16 +27,13 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
+	z-index: -1;
 	transform: skewY(5deg);
 }
 
 // --------------CONTACT TITLE----------------------------
 
 .contact__container {
-	position: absolute;
-	top: 5rem;
-	left: 5rem;
-	z-index: 1;
 	@include flex(column, 2rem);
 	&--title {
 		font-family: "Bruno Ace SC", cursive;
@@ -56,39 +58,63 @@
 // --------------CONTACT LOGO------------------------------
 
 .contact-logo {
-	position: absolute;
-	z-index: 1;
-	top: 25%;
-	right: 8rem;
 	width: 9rem;
 	height: 9rem;
 }
 
 // --------------MEDIA QUERIES------------------------------------
 
-@media (max-width: 1000px) {
-	.contact-logo {
-		top: 35%;
-	}
-}
-
-@media (max-width: 700px) {
+@media (max-width: 800px) {
 	.contact-section {
 		height: 90vh;
+		@include flex(column, 0);
+		padding-top: 3rem;
 	}
-
 	.contact__container {
-		left: 50%;
-		transform: translateX(-50%);
 		@include flex(column, 2rem);
+		align-items: center;
 		&--title {
 			font-size: 2rem;
 		}
 	}
 
+	.contact__details {
+		@include flex(column, 2rem);
+		text-align: center;
+		&--block {
+			span {
+				font-size: 1.7rem;
+				font-family: "Bruno Ace SC", cursive;
+			}
+			p {
+				font-size: 1.5rem;
+				font-family: "IBM Plex Mono", monospace;
+			}
+		}
+	}
+}
+
+@media (max-width: 800px) {
+	.contact-section {
+		height: 75vh;
+	}
+	.contact__container--title {
+		font-size: 1.3rem;
+	}
+
+	.contact__details--block {
+		span {
+			font-size: 1.3rem;
+			font-family: "Bruno Ace SC", cursive;
+		}
+		p {
+			font-size: 1rem;
+			font-family: "IBM Plex Mono", monospace;
+		}
+	}
+
 	.contact-logo {
-		top: 50%;
-		left: 50%;
-		transform: translateX(-50%);
+		width: 6rem;
+		height: 6rem;
 	}
 }
