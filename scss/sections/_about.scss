@@ -88,6 +88,12 @@
 	}
 }
 
+@media (max-height: 721px) {
+	.about-section {
+		height: 105vh;
+	}
+}
+
 @media (max-height: 700px) {
 	.about-section {
 		height: 110vh;
