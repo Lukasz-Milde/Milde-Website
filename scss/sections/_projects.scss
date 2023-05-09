@@ -85,7 +85,8 @@
 	}
 	&--buttons {
 		@include flex(row, 1.5rem);
-		button {
+		a {
+			text-decoration: none;
 			font-family: "Bruno Ace SC", cursive;
 			border: none;
 			background-color: transparent;

@@ -11,285 +11,295 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="public/logos/icons8-crescent-moon-100.png">
   <link rel="stylesheet" href="scss/main.scss">
   <title>Milde Space</title>
 </head>
 
 <body>
-  <!-- ------------------------------------------------------- -->
-  <!-- ---------------------HOME------------------------------ -->
-  <!-- ------------------------------------------------------- -->
-  <header class="header-section" id="home">
-    <nav class="nav-section">
-      <span class="nav__logo">
-        <img src="./public/logos/icons8-crescent-moon-100.png" alt="logo">
-      </span>
-      <ul class="nav__links">
-        <li class="nav__link--home"><a href="#home">HOME</a></li>
-        <li class="nav__link--about"><a href="#about">ABOUT</a></li>
-        <li class="nav__link--projects"><a href="#projects">PROJECTS</a></li>
-        <li class="nav__link--contact"><a href="#contact">CONTACT</a></li>
-      </ul>
-    </nav>
-    <div class="home-main">
-      <div class="home-text">
-        <p>Man can grasp so few things at once; we only see what is happening in front of us, here and now; it is beyond
-          his
-          capacity to visualize the simultaneous multitude of processes, however interrelated, however even
-          complementary.
-          We
-          experience this even with relatively simple phenomena.</p>
-        <span>Stanislaw Lem - "Solaris"</span>
+  <main>
+    <!-- ------------------------------------------------------- -->
+    <!-- ---------------------HOME------------------------------ -->
+    <!-- ------------------------------------------------------- -->
+    <header class="header-section" id="home">
+      <nav class="nav-section">
+        <span class="nav__logo">
+          <img src="/logos/icons8-crescent-moon-100.png" alt="logo">
+        </span>
+        <ul class="nav__links">
+          <li class="nav__link--home"><a href="#home">HOME</a></li>
+          <li class="nav__link--about"><a href="#about">ABOUT</a></li>
+          <li class="nav__link--projects"><a href="#projects">PROJECTS</a></li>
+          <li class="nav__link--contact"><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+      <div class="home-main">
+        <div class="home-text">
+          <p>Man can grasp so few things at once; we only see what is happening in front of us, here and now; it is
+            beyond
+            his
+            capacity to visualize the simultaneous multitude of processes, however interrelated, however even
+            complementary.
+            We
+            experience this even with relatively simple phenomena.</p>
+          <span>Stanislaw Lem - "Solaris"</span>
+        </div>
+        <div class="home__title">
+          <span class="home__title--hello">HELLO UNIVERSE</span>
+          <h1>
+            MILDE <br>
+            LUKASZ
+          </h1>
+          <span class="home__title--developer">FRONTEND WEB DEVELOPER</span>
+        </div>
       </div>
-      <div class="home__title">
-        <span class="home__title--hello">HELLO UNIVERSE</span>
-        <h1>
-          MILDE <br>
-          LUKASZ
-        </h1>
-        <span class="home__title--developer">FRONTEND WEB DEVELOPER</span>
+      <div class="home-scroll">
+        <img src="/icons/arrow-down.svg" alt="arrow icon">
+        <span class="home-scroll__span">scroll down</span>
       </div>
-    </div>
-    <div class="home-scroll">
-      <img src="./public/icons/arrow-down.svg" alt="arrow icon">
-      <span class="home-scroll__span">scroll down</span>
-    </div>
-    <div class="home-sphere">
-      <div class="home-sphere__logo">
-        <img src="public/logos/earth.svg" alt="logo">
+      <div class="home-sphere">
+        <div class="home-sphere__logo">
+          <img src="/logos/earth.svg" alt="grid of an earth">
+        </div>
       </div>
-    </div>
-    <div class="social__nav">
-      <ul>
-        <li>
-          <div class="social__nav--block">
-            <img class="nav-logo" src="./public/logos/git.svg" alt="">
-          </div>
-        </li>
-        <li>
-          <div class="social__nav--block">
-            <img class="nav-logo" src="./public/logos/linkedin.svg" alt="">
-          </div>
-        </li>
-      </ul>
-    </div>
-  </header>
-  <!-- --------------------------------------------------------- -->
-  <!-- ---------------------ABOUT------------------------------- -->
-  <!-- --------------------------------------------------------- -->
-  <section class="about-section">
-    <div class="about__container--finger">
-      <img src="./public/icons/fingerprint.svg" alt="">
-    </div>
-    <div class="about__container--block">
-      <p class="about__container--text">I'm brave enough to have ambition. My goal is to have a job where I can create
-        interesting projects and develop myself.
-        I like challenges and I like the feeling of satisfaction from a solved problem. The frontend is a perfect
-        combination -
-        it includes the visual aspect, logic, and abstractions. I am a patient person, so a long-distance journey is a
-        pleasure
-        for me. Let's create something great together.</p>
-      <span class="about__container--hash">
-        #motivated #abmitious #curious <br>
-        #dedicated #passionat #open-minded
-      </span>
-    </div>
-  </section>
-  <!-- --------------------------------------------------------- -->
-  <!-- ---------------------SKILLS------------------------------ -->
-  <!-- --------------------------------------------------------- -->
-  <section class="skills-section">
-    <div class="skills__title">
-      <span class="skills__title--span">TOOLS <br> SKILLS <br> TECHNOLOGIES </span>
-      <div class="skills__title--logo">
-        <img src="./public/icons/tech.svg" alt="">
-      </div>
-    </div>
-    <div class="skills__container">
-      <div class="skills__container--block">
-        <span class="skills__container--span">TECH</span>
-        <ul class="skills__container--list">
-          <li>SCSS</li>
-          <li>REACT</li>
-          <li>HTML/CSS</li>
-          <li>UNIT TESTS</li>
-          <li>JAVASCRIPT</li>
-          <li>TYPESCRIPT</li>
+      <div class="social__nav">
+        <ul>
+          <li>
+            <div class="social__nav--block">
+              <a href="https://github.com/Lukasz-Milde" target="_blank"><img class="nav-logo" src="/logos/git.svg"
+                  alt="logo of github"></a>
+
+            </div>
+          </li>
+          <li>
+            <div class="social__nav--block">
+              <a href="https://www.linkedin.com/in/lukasz-milde-12b223276/" target="_blank"><img class="nav-logo"
+                  src="/logos/linkedin.svg" alt="logo of linkedin"></a>
+            </div>
+          </li>
         </ul>
       </div>
-      <div class="skills__container--block">
-        <span class="skills__container--span">TOOLS</span>
-        <ul class="skills__container--list">
-          <li>GIT</li>
-          <li>NPM</li>
-          <li>JEST</li>
-          <li>VITE</li>
-          <li>FIGMA</li>
-          <li>DEV TOOLS</li>
-        </ul>
+    </header>
+    <!-- --------------------------------------------------------- -->
+    <!-- ---------------------ABOUT------------------------------- -->
+    <!-- --------------------------------------------------------- -->
+    <section class="about-section" id="about">
+      <div class="about__container--finger">
+        <img src="/icons/fingerprint.svg" alt="fingerprint icon">
       </div>
-    </div>
-  </section>
-  <!-- --------------------------------------------------------- -->
-  <!-- ---------------------PROJECTS---------------------------- -->
-  <!-- --------------------------------------------------------- -->
-  <section class="projects-section" id="projects">
-    <div class="projects__main-container">
-      <div class="project-block">
-        <div class="project-block__img">
-          <img src="./public/projects-images/advice-generator.png" alt="screenshot of the project">
+      <div class="about__container--block">
+        <p class="about__container--text">I'm brave enough to have ambition. My goal is to have a job where I can create
+          interesting projects and develop myself.
+          I like challenges and I like the feeling of satisfaction from a solved problem. The frontend is a perfect
+          combination -
+          it includes the visual aspect, logic, and abstractions. I am a patient person, so a long-distance journey is a
+          pleasure
+          for me. Let's create something great together.</p>
+        <span class="about__container--hash">
+          #motivated #ambitious #curious <br>
+          #dedicated #passionate #open-minded
+        </span>
+      </div>
+    </section>
+    <!-- --------------------------------------------------------- -->
+    <!-- ---------------------SKILLS------------------------------ -->
+    <!-- --------------------------------------------------------- -->
+    <section class="skills-section">
+      <div class="skills__title">
+        <span class="skills__title--span">TOOLS <br> SKILLS <br> TECHNOLOGIES </span>
+        <div class="skills__title--logo">
+          <img src="/icons/tech.svg" alt="working hand icon">
         </div>
-        <div class="project-block__text">
-          <h3 class="project-block__text--title">Adavice generator</h3>
-          <p class="project-block__text--description">Simple app that by clicking on dice generates random advice
-            quotes. I've learned how to interact with 3rd-party APIs.</p>
-          <span class="project-block__text--span">HTML / CSS / JS / API</span>
-          <div class="project-block__text--buttons">
-            <a href="">
-              <button>-SITE-</button>
-            </a>
-            <a href="">
-              <button>-CODE-</button>
-            </a>
+      </div>
+      <div class="skills__container">
+        <div class="skills__container--block">
+          <span class="skills__container--span">TECH</span>
+          <ul class="skills__container--list">
+            <li>SCSS</li>
+            <li>REACT</li>
+            <li>HTML/CSS</li>
+            <li>UNIT TESTS</li>
+            <li>JAVASCRIPT</li>
+            <li>TYPESCRIPT</li>
+          </ul>
+        </div>
+        <div class="skills__container--block">
+          <span class="skills__container--span">TOOLS</span>
+          <ul class="skills__container--list">
+            <li>GIT</li>
+            <li>NPM</li>
+            <li>JEST</li>
+            <li>VITE</li>
+            <li>FIGMA</li>
+            <li>DEV TOOLS</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <!-- --------------------------------------------------------- -->
+    <!-- ---------------------PROJECTS---------------------------- -->
+    <!-- --------------------------------------------------------- -->
+    <section class="projects-section" id="projects">
+      <div class="projects__main-container">
+        <div class="project-block">
+          <div class="project-block__img">
+            <img src="/projects-images/advice-generator.png" alt="screenshot of the project">
+          </div>
+          <div class="project-block__text">
+            <h3 class="project-block__text--title">Adavice generator</h3>
+            <p class="project-block__text--description">Simple app that by clicking on dice generates random advice
+              quotes. I've learned how to interact with 3rd-party APIs.</p>
+            <span class="project-block__text--span">HTML / CSS / JS / API</span>
+            <div class="project-block__text--buttons">
+              <a href="">
+                -SITE-
+              </a>
+              <a href="https://github.com/Lukasz-Milde/Advise-generator" target="_blank">
+                -CODE-
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="project-block">
+          <div class="project-block__img">
+            <img src="/projects-images/notifications.png" alt="screenshot of the project">
+          </div>
+          <div class="project-block__text">
+            <h3 class="project-block__text--title">Notification page</h3>
+            <p class="project-block__text--description">Another common pattern that we can find on larger sites. Build
+              with Parcel and SCSS.</p>
+            <span class="project-block__text--span">HTML / SCSS / JS / PARCEL</span>
+            </p>
+            <div class="project-block__text--buttons">
+              <a href="">
+                -SITE-
+              </a>
+              <a href="https://github.com/Lukasz-Milde/Notification-Page" target="_blank">
+                -CODE-
+              </a>
+            </div>
           </div>
         </div>
       </div>
-      <div class="project-block">
-        <div class="project-block__img">
-          <img src="./public/projects-images/notifications.png" alt="screenshot of the project">
+      <div class="projects__header">
+        <h2 class="projects__header--title">PROJECTS</h2>
+        <p class="projects__header--text">At the beginning I chose tasks from the Fronend Mentor portal, because I
+          didn't
+          have to focus on creating my own design.
+          I'm currently working on my own custom projects. New things are
+          coming...</p>
+      </div>
+      <div class="projects-logo">
+        <img src="/icons/projects.svg" alt="hand holding a plant icon">
+      </div>
+    </section>
+    <!-- --------------------------------------------------------- -->
+    <!-- ---------------------CONTACT------------------------------ -->
+    <!-- --------------------------------------------------------- -->
+    <section class="contact-section" id="contact">
+      <div class="contact__container">
+        <div class="contact__container--title">
+          <h2>CONTACT</h2>
         </div>
-        <div class="project-block__text">
-          <h3 class="project-block__text--title">Notification page</h3>
-          <p class="project-block__text--description">Another common pattern that we can find on larger sites. Build
-            with Parcel and SCSS.</p>
-          <span class="project-block__text--span">HTML / SCSS / JS / PARCEL</span>
-          </p>
-          <div class="project-block__text--buttons">
-            <a href="">
-              <button>-SITE-</button>
-            </a>
-            <a href="">
-              <button>-CODE-</button>
-            </a>
+        <div class="contact__details">
+          <div class="contact__details--block">
+            <span>PHONE</span>
+            <p>Phone: 075 647 37205 <br>
+              Mobile: 77853429l</p>
+          </div>
+          <div class="contact__details--block">
+            <span>EMAIL</span>
+            <p>lukasz@milde.live <br>
+              pada@live.it</p>
           </div>
         </div>
       </div>
-    </div>
-    <div class="projects__header">
-      <h2 class="projects__header--title">PROJECTS</h2>
-      <p class="projects__header--text">At the beginning I chose tasks from the Fronend Mentor portal, because I didn't
-        have to focus on creating my own design.
-        I'm currently working on my own custom projects. New things are
-        coming...</p>
-    </div>
-    <div class="projects-logo">
-      <img src="./public/icons/projects.svg" alt="">
-    </div>
-  </section>
-  <!-- --------------------------------------------------------- -->
-  <!-- ---------------------CONTACT------------------------------ -->
-  <!-- --------------------------------------------------------- -->
-  <section class="contact-section" id="contact">
-    <div class="contact__container">
-      <div class="contact__container--title">
-        <h2>CONTACT</h2>
+      <div class="contact-logo">
+        <img src="/icons/contact.svg" alt="antenna ">
       </div>
-      <div class="contact__details">
-        <div class="contact__details--block">
-          <span>PHONE</span>
-          <p>Phone: 075 647 37205 <br>
-            Mobile: 77853429l</p>
-        </div>
-        <div class="contact__details--block">
-          <span>EMAIL</span>
-          <p>lukasz@milde.space <br>
-            pada@live.it</p>
-        </div>
-      </div>
-    </div>
-    <div class="contact-logo">
-      <img src="./public/icons/contact.svg" alt="">
-    </div>
-  </section>
+    </section>
+  </main>
   <!-- --------------------------------------------------------- -->
   <!-- ---------------------FOOTER------------------------------ -->
   <!-- --------------------------------------------------------- -->
-  <section class="footer-section" id="footer">
-    <div class="footer__left">
-      <div class="footer__left--top">
-        <img class="footer--icon" src="./public/icons/satelite.svg" alt="logo">
-        <div class="footer__links">
-          <span data-tilt>LINKEDIN</span>
-          <span data-tilt>GITHUB</span>
+  <footer>
+    <section class="footer-section">
+      <div class="footer__left">
+        <div class="footer__left--top">
+          <img class="footer--icon" src="/icons/satelite.svg" alt="logo">
+          <div class="footer__links">
+            <span data-tilt>LINKEDIN</span>
+            <span data-tilt>GITHUB</span>
+          </div>
+        </div>
+        <div class="footer__left--bottom">
+          <span class="design">design / author</span>
+          <span class="author">LUKASZ MILDE</span>
         </div>
       </div>
-      <div class="footer__left--bottom">
-        <span class="design">design / author</span>
-        <span class="author">LUKASZ MILDE</span>
+      <div class="footer__button">
+        <button><a href="#home"> back to the top </a></button>
       </div>
-    </div>
-    <div class="footer__button">
-      <button><a href="#home"> back to the top </a></button>
-    </div>
-    <div class="footer__right">
-      <span class="footer__right--title">
-        CREDITS
-      </span>
-      <ul class="footer--credits">
-        <li>Icon by <a href="https://freeicons.io/profile/3">icon king1</a> on <a
-            href="https://freeicons.io">freeicons.io</a></li>
-        <li>Icon by <a class="link_pro" href="https://freeicons.io/social-media-icons-5/linkedin-black-icon-15777">icon
-            king1</a>
-          on <a href="https://freeicons.io">freeicons.io</a></li>
-        <li>Icon by <a class="link_pro"
-            href="https://freeicons.io/navigation-set-arrows/aroow down-arrow-download-icon-708">icon
-            king1</a>
-          on <a href="https://freeicons.io">freeicons.io</a></li>
-        <li>Icon by <a class="link_pro"
-            href="https://freeicons.io/internet-&amp;-security-icon-set-2/finger-scan-security-fingerprint-biometric-icon-47547">ColourCreatype</a>
-          on <a href="https://freeicons.io">freeicons.io</a></li>
-        <li>Icon by <a class="link_pro"
-            href="https://freeicons.io/construction-2/construction-engineering-protection-hold-hand-cog-technology-icon-42418">www.wishforge.games</a>
-          on <a href="https://freeicons.io">freeicons.io</a></li>
-        <li>Icon by <a href="https://freeicons.io/profile/2257">www.wishforge.games</a> on <a
-            href="https://freeicons.io">freeicons.io</a></li>
-        <li>Icon by <a class="link_pro"
-            href="https://freeicons.io/user-interface-43/satelite-antena-dish-antenna-icon-514492">ColourCreatype</a>
-          on <a href="https://freeicons.io">freeicons.io</a></li>
-        <li>Icon by <a class="link_pro"
-            href="https://freeicons.io/space-and-sci-fi-2/space-earth-moon-orbit-sun-icon-44027">www.wishforge.games</a>
-          on <a href="https://freeicons.io">freeicons.io</a></li>
-        <li>Icon by <a class="link_pro"
-            href="https://freeicons.io/space/venus-neptune-planet-space-icon-131417">Muhammad Naufal
-            Subhiansyah</a>
-          on <a href="https://freeicons.io">freeicons.io</a></li>
-        <li>Icon by <a class="link_pro"
-            href="https://freeicons.io/space-and-sci-fi-2/space-satellite-signal-icon-44042">www.wishforge.games</a>
-          on <a href="https://freeicons.io">freeicons.io</a></li>
-      </ul>
-    </div>
-    <div class="footer-sphere">
-      <div div class="footer-sphere--small"></div>
-      <div class="footer-sphere--logo">
-        <img src="public/icons/footer-planet.svg" alt="logo">
+      <div class="footer__right">
+        <span class="footer__right--title">
+          CREDITS
+        </span>
+        <ul class="footer--credits">
+          <li>Icon by <a href="https://freeicons.io/profile/3">icon king1</a> on <a
+              href="https://freeicons.io">freeicons.io</a></li>
+          <li>Icon by <a class="link_pro"
+              href="https://freeicons.io/social-media-icons-5/linkedin-black-icon-15777">icon
+              king1</a>
+            on <a href="https://freeicons.io">freeicons.io</a></li>
+          <li>Icon by <a class="link_pro"
+              href="https://freeicons.io/navigation-set-arrows/aroow down-arrow-download-icon-708">icon
+              king1</a>
+            on <a href="https://freeicons.io">freeicons.io</a></li>
+          <li>Icon by <a class="link_pro"
+              href="https://freeicons.io/internet-&amp;-security-icon-set-2/finger-scan-security-fingerprint-biometric-icon-47547">ColourCreatype</a>
+            on <a href="https://freeicons.io">freeicons.io</a></li>
+          <li>Icon by <a class="link_pro"
+              href="https://freeicons.io/construction-2/construction-engineering-protection-hold-hand-cog-technology-icon-42418">www.wishforge.games</a>
+            on <a href="https://freeicons.io">freeicons.io</a></li>
+          <li>Icon by <a href="https://freeicons.io/profile/2257">www.wishforge.games</a> on <a
+              href="https://freeicons.io">freeicons.io</a></li>
+          <li>Icon by <a class="link_pro"
+              href="https://freeicons.io/user-interface-43/satelite-antena-dish-antenna-icon-514492">ColourCreatype</a>
+            on <a href="https://freeicons.io">freeicons.io</a></li>
+          <li>Icon by <a class="link_pro"
+              href="https://freeicons.io/space-and-sci-fi-2/space-earth-moon-orbit-sun-icon-44027">www.wishforge.games</a>
+            on <a href="https://freeicons.io">freeicons.io</a></li>
+          <li>Icon by <a class="link_pro"
+              href="https://freeicons.io/space/venus-neptune-planet-space-icon-131417">Muhammad Naufal
+              Subhiansyah</a>
+            on <a href="https://freeicons.io">freeicons.io</a></li>
+          <li>Icon by <a class="link_pro"
+              href="https://freeicons.io/space-and-sci-fi-2/space-satellite-signal-icon-44042">www.wishforge.games</a>
+            on <a href="https://freeicons.io">freeicons.io</a></li>
+        </ul>
       </div>
-    </div>
-  </section>
-  <section class="bottom__footer">
-    <div class="bottom__footer--logo">
-      <img src="./public/logos/icons8-crescent-moon-100.png" alt="">
-    </div>
-    <div class="bottom__footer--text">
-      <p>"(...)his first training was in how to learn. And the first lesson of all was the basic trust that he could
-        learn. It's
-        shocking to find how many people do not believe they can learn, and how many more believe learning to be
-        difficult.
-        Muad'Dib knew that every experience carries its lesson.”
-      </p>
-      <span>Frank Herbert- Dune</span>
-    </div>
-  </section>
-
+      <div class="footer-sphere">
+        <div div class="footer-sphere--small"></div>
+        <div class="footer-sphere--logo">
+          <img src="/icons/footer-planet.svg" alt="grid of an earth">
+        </div>
+      </div>
+    </section>
+    <section class="bottom__footer">
+      <div class="bottom__footer--logo">
+        <img src="/logos/icons8-crescent-moon-100.png" alt="logo">
+      </div>
+      <div class="bottom__footer--text">
+        <p>"(...)his first training was in how to learn. And the first lesson of all was the basic trust that he could
+          learn. It's
+          shocking to find how many people do not believe they can learn, and how many more believe learning to be
+          difficult.
+          Muad'Dib knew that every experience carries its lesson.”
+        </p>
+        <span>Frank Herbert- Dune</span>
+      </div>
+    </section>
+  </footer>
 </body>
 
 </html>
