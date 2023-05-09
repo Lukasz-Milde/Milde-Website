@@ -44,7 +44,7 @@
 .contact__details {
 	@include flex(column, 2rem);
 	&--block {
-		span {
+		h3 {
 			font-size: 2rem;
 			font-family: "Bruno Ace SC", cursive;
 		}

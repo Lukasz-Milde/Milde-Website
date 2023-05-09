@@ -3,8 +3,12 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="This is the personal website of Lukasz Milde, a frontend web developer based in Europe.">
+  <meta name="keywords" content="frontend, web development, HTML, CSS, SCSS, JavaScript, React, Typescript">
+  <meta name="author" content="Lukasz Milde">
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
@@ -23,7 +27,7 @@
     <!-- ------------------------------------------------------- -->
     <header class="header-section" id="home">
       <nav class="nav-section">
-        <span class="nav__logo">
+        <span class="nav__logo" aria-hidden="true">
           <img src="/logos/icons8-crescent-moon-100.png" alt="logo">
         </span>
         <ul class="nav__links">
@@ -53,11 +57,11 @@
           <span class="home__title--developer">FRONTEND WEB DEVELOPER</span>
         </div>
       </div>
-      <div class="home-scroll">
+      <div class="home-scroll" aria-hidden="true">
         <img src="/icons/arrow-down.svg" alt="arrow icon">
         <span class="home-scroll__span">scroll down</span>
       </div>
-      <div class="home-sphere">
+      <div class="home-sphere" aria-hidden="true">
         <div class="home-sphere__logo">
           <img src="/logos/earth.svg" alt="grid of an earth">
         </div>
@@ -84,7 +88,7 @@
     <!-- ---------------------ABOUT------------------------------- -->
     <!-- --------------------------------------------------------- -->
     <section class="about-section" id="about">
-      <div class="about__container--finger">
+      <div class="about__container--finger" aria-hidden="true">
         <img src="/icons/fingerprint.svg" alt="fingerprint icon">
       </div>
       <div class="about__container--block">
@@ -106,14 +110,14 @@
     <!-- --------------------------------------------------------- -->
     <section class="skills-section">
       <div class="skills__title">
-        <span class="skills__title--span">TOOLS <br> SKILLS <br> TECHNOLOGIES </span>
-        <div class="skills__title--logo">
+        <h2 class="skills__title--h2">TOOLS <br> SKILLS <br> TECHNOLOGIES </h2>
+        <div class="skills__title--logo" aria-hidden="true">
           <img src="/icons/tech.svg" alt="working hand icon">
         </div>
       </div>
       <div class="skills__container">
         <div class="skills__container--block">
-          <span class="skills__container--span">TECH</span>
+          <h3 class="skills__container--h3">TECH</h3>
           <ul class="skills__container--list">
             <li>SCSS</li>
             <li>REACT</li>
@@ -124,7 +128,7 @@
           </ul>
         </div>
         <div class="skills__container--block">
-          <span class="skills__container--span">TOOLS</span>
+          <h3 class="skills__container--h3">TOOLS</h3>
           <ul class="skills__container--list">
             <li>GIT</li>
             <li>NPM</li>
@@ -146,7 +150,7 @@
             <img src="/projects-images/advice-generator.png" alt="screenshot of the project">
           </div>
           <div class="project-block__text">
-            <h3 class="project-block__text--title">Adavice generator</h3>
+            <h3 class="project-block__text--title">Advice generator</h3>
             <p class="project-block__text--description">Simple app that by clicking on dice generates random advice
               quotes. I've learned how to interact with 3rd-party APIs.</p>
             <span class="project-block__text--span">HTML / CSS / JS / API</span>
@@ -189,7 +193,7 @@
           I'm currently working on my own custom projects. New things are
           coming...</p>
       </div>
-      <div class="projects-logo">
+      <div class="projects-logo" aria-hidden="true">
         <img src="/icons/projects.svg" alt="hand holding a plant icon">
       </div>
     </section>
@@ -203,18 +207,18 @@
         </div>
         <div class="contact__details">
           <div class="contact__details--block">
-            <span>PHONE</span>
+            <h3>PHONE</h3>
             <p>Phone: 075 647 37205 <br>
               Mobile: 77853429l</p>
           </div>
           <div class="contact__details--block">
-            <span>EMAIL</span>
+            <h3>EMAIL</h3>
             <p>lukasz@milde.live <br>
               pada@live.it</p>
           </div>
         </div>
       </div>
-      <div class="contact-logo">
+      <div class="contact-logo" aria-hidden="true">
         <img src="/icons/contact.svg" alt="antenna ">
       </div>
     </section>
@@ -226,10 +230,10 @@
     <section class="footer-section">
       <div class="footer__left">
         <div class="footer__left--top">
-          <img class="footer--icon" src="/icons/satelite.svg" alt="logo">
+          <img class="footer--icon" src="/icons/satelite.svg" alt="logo" aria-hidden="true">
           <div class="footer__links">
-            <span data-tilt>LINKEDIN</span>
-            <span data-tilt>GITHUB</span>
+            <a href="https://www.linkedin.com/in/lukasz-milde-12b223276/" target="_blank">LINKEDIN</a>
+            <a href="https://github.com/Lukasz-Milde" target="_blank">GITHUB</a>
           </div>
         </div>
         <div class="footer__left--bottom">
@@ -241,9 +245,7 @@
         <button><a href="#home"> back to the top </a></button>
       </div>
       <div class="footer__right">
-        <span class="footer__right--title">
-          CREDITS
-        </span>
+        <h2 class="footer__right--title">CREDITS</h2>
         <ul class="footer--credits">
           <li>Icon by <a href="https://freeicons.io/profile/3">icon king1</a> on <a
               href="https://freeicons.io">freeicons.io</a></li>
@@ -280,13 +282,13 @@
       </div>
       <div class="footer-sphere">
         <div div class="footer-sphere--small"></div>
-        <div class="footer-sphere--logo">
+        <div class="footer-sphere--logo" aria-hidden="true">
           <img src="/icons/footer-planet.svg" alt="grid of an earth">
         </div>
       </div>
     </section>
     <section class="bottom__footer">
-      <div class="bottom__footer--logo">
+      <div class="bottom__footer--logo" aria-hidden="true">
         <img src="/logos/icons8-crescent-moon-100.png" alt="logo">
       </div>
       <div class="bottom__footer--text">

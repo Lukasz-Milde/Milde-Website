@@ -43,6 +43,10 @@
 
 .footer__links {
 	@include flex(column, 1.5rem);
+	a {
+		text-decoration: none;
+		color: $primary-text;
+	}
 }
 
 .design {
@@ -341,12 +345,6 @@
 		height: 155vh;
 	}
 }
-
-// @media (max-height: 1000px) {
-// 	.footer-section {
-// 		height: 135vh;
-// 	}
-// }
 
 @media (max-height: 750px) {
 	.footer-section {

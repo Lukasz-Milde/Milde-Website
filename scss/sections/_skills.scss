@@ -35,7 +35,7 @@
 .skills__title {
 	max-width: 30rem;
 	align-self: start;
-	&--span {
+	&--h2 {
 		font-size: 5rem;
 		line-height: 7rem;
 		font-family: "Bruno Ace SC", cursive;
@@ -59,7 +59,7 @@
 	@include flex(row, 0);
 	justify-content: space-between;
 	text-align: end;
-	&--span {
+	&--h3 {
 		font-size: 2rem;
 		font-family: "Bruno Ace SC", cursive;
 	}
