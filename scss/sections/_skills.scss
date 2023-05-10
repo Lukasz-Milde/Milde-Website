@@ -81,7 +81,7 @@
 // --------------MEDIA QUERIES------------------------------------
 
 @media (max-width: 1300px) {
-	.skills__title--span {
+	.skills__title--h2 {
 		font-size: 3rem;
 		line-height: 5rem;
 	}
@@ -127,7 +127,7 @@
 
 	.skills__title {
 		align-self: center;
-		&--span {
+		&--h2 {
 			font-size: 2rem;
 			line-height: 3rem;
 		}
@@ -171,7 +171,7 @@
 
 	.skills__title {
 		text-align: center;
-		&--span {
+		&--h2 {
 			font-size: 1.5rem;
 			line-height: 2.5rem;
 		}
