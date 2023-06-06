@@ -2,8 +2,8 @@
 
 .footer-section {
 	position: relative;
-	height: 80vh;
 	isolation: isolate;
+	padding-bottom: 45rem;
 }
 
 .footer-section::after {
@@ -154,7 +154,7 @@
 	z-index: -1;
 	margin-top: -10rem;
 	z-index: 1;
-	height: 30vh;
+	padding-block: 10rem;
 	background-image: linear-gradient(315deg, #ced4daff, #adb5bdff);
 	&--logo {
 		position: absolute;
@@ -202,7 +202,7 @@
 
 @media (max-width: 1000px) {
 	.footer-section {
-		height: 120vh;
+		padding-bottom: 65rem;
 	}
 
 	.footer--icon {
@@ -258,20 +258,14 @@
 
 @media (max-width: 800px) {
 	.footer-section {
-		height: 125vh;
+		padding-bottom: 70rem;
 	}
 
-	.footer--credits {
-		margin-top: 2rem;
-		line-height: 1rem;
-		font-size: 0.7rem;
-	}
-
-	.bottom__footer {
-		&--logo {
+	.footer__left {
+		&--top {
 			img {
-				width: 5rem;
-				height: 5rem;
+				width: 6rem;
+				height: 6rem;
 			}
 		}
 	}
@@ -285,9 +279,32 @@
 			margin-bottom: 1rem;
 		}
 	}
+	.bottom__footer {
+		&--logo {
+			img {
+				width: 5rem;
+				height: 5rem;
+			}
+		}
+	}
+
+	.footer--credits {
+		margin-top: 2rem;
+		line-height: 2rem;
+		font-size: 0.7rem;
+	}
 }
 
 @media (max-width: 600px) {
+	.footer-section {
+		padding-bottom: 65rem;
+	}
+
+	.footer--credits {
+		line-height: 1.5rem;
+		letter-spacing: 0.05rem;
+	}
+
 	.footer-sphere {
 		width: 20rem;
 		height: 20rem;
@@ -307,13 +324,13 @@
 	}
 }
 
-@media (max-width: 480px) {
-	.footer-section {
-		height: 145vh;
+@media (max-width: 500px) {
+	.footer--credits {
+		line-height: 1rem;
+		letter-spacing: 0.05rem;
 	}
 
 	.bottom__footer {
-		height: 40vh;
 		&--logo {
 			left: 2rem;
 			img {
@@ -324,7 +341,11 @@
 	}
 }
 
-@media (max-width: 350px) {
+@media (max-width: 360px) {
+	.footer-section {
+		padding-bottom: 73rem;
+	}
+
 	.footer-sphere {
 		width: 13rem;
 		height: 13rem;
@@ -334,34 +355,13 @@
 			height: 5rem;
 		}
 	}
-
 	.bottom__footer {
-		height: 50vh;
+		padding-block: 13rem;
 	}
 }
 
 @media (max-width: 260px) {
 	.footer-section {
-		height: 155vh;
-	}
-}
-
-@media (max-height: 750px) {
-	.footer-section {
-		height: 175vh;
-	}
-
-	.bottom__footer {
-		height: 55vh;
-	}
-}
-
-@media (max-height: 700px) {
-	.footer-section {
-		height: 185vh;
-	}
-
-	.bottom__footer {
-		height: 60vh;
+		padding-bottom: 75rem;
 	}
 }

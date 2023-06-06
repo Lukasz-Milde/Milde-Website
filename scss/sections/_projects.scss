@@ -210,6 +210,20 @@
 }
 
 @media (max-width: 350px) {
+	.projects__header {
+		width: 80vw;
+	}
+
+	.projects__header--title {
+		font-size: 2em;
+		margin-bottom: 0.5rem;
+	}
+
+	.projects__header--text {
+		font-size: 0.8rem;
+		line-height: 1.2rem;
+	}
+
 	.project-block {
 		@include flex(column, 1.5rem);
 		&__img {

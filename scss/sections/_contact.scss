@@ -2,7 +2,6 @@
 
 .contact-section {
 	position: relative;
-	height: 80vh;
 	isolation: isolate;
 	@include flex(row, 0);
 	justify-content: space-between;
@@ -64,11 +63,18 @@
 
 // --------------MEDIA QUERIES------------------------------------
 
+@media (max-width: 1000px) {
+	.contact__container {
+		&--title {
+			font-size: 2.5rem;
+		}
+	}
+}
 @media (max-width: 800px) {
 	.contact-section {
-		height: 90vh;
 		@include flex(column, 0);
 		padding-top: 3rem;
+		padding-bottom: 15rem;
 	}
 	.contact__container {
 		@include flex(column, 2rem);
@@ -81,6 +87,7 @@
 	.contact__details {
 		@include flex(column, 2rem);
 		text-align: center;
+		margin-bottom: 3rem;
 		&--block {
 			span {
 				font-size: 1.7rem;
@@ -92,26 +99,6 @@
 			}
 		}
 	}
-}
-
-@media (max-width: 800px) {
-	.contact-section {
-		height: 75vh;
-	}
-	.contact__container--title {
-		font-size: 1.3rem;
-	}
-
-	.contact__details--block {
-		span {
-			font-size: 1.3rem;
-			font-family: "Bruno Ace SC", cursive;
-		}
-		p {
-			font-size: 1rem;
-			font-family: "IBM Plex Mono", monospace;
-		}
-	}
 
 	.contact-logo {
 		width: 6rem;
@@ -119,29 +106,23 @@
 	}
 }
 
-@media (max-height: 1050px) {
+@media (max-width: 500px) {
 	.contact-section {
-		height: 70vh;
-		padding-bottom: 13rem;
 	}
-}
-
-@media (max-height: 1000px) {
-	.contact-section {
-		height: 70vh;
-		padding-bottom: 10rem;
+	.contact__container--title {
+		font-size: 1.3rem;
 	}
-}
 
-@media (max-height: 750px) {
-	.contact-section {
-		height: 80vh;
-		padding-bottom: 10rem;
-	}
-}
-
-@media (max-height: 700px) {
-	.contact-section {
-		height: 90vh;
+	.contact__details {
+		gap: 3rem;
+		&--block {
+			h3 {
+				font-size: 2rem;
+				margin-bottom: 1rem;
+			}
+			p {
+				font-size: 0.9rem;
+			}
+		}
 	}
 }
