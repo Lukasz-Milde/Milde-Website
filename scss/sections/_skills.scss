@@ -56,7 +56,7 @@
 
 .skills__container {
 	align-self: end;
-	@include flex(row, 0);
+	@include flex(row, 2rem);
 	justify-content: space-between;
 	text-align: end;
 	&--h3 {
